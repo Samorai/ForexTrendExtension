@@ -1,18 +1,17 @@
 {
     "manifest_version": 2,
     "name": "Forex Trend Helper",
-    "version": "1.0",
+    "version": "1.1",
     "permissions": [
          "https://fx-trend.com/*"
     ],
     "content_scripts": [ {
-        "js": [ "jquery.js", "javascript.js" ],
+        "js": [ "var/js/jquery.js", "var/js/javascript.js" ],
         "matches": [ "https://fx-trend.com/*"]
     }],
     "browser_action": {
         "name": "Manipulate DOM",
-        "icons": ["favicon.png"],
-        "default_icon": "favicon.png",
-        "default_popup" : "popup.html"
+        "icons": ["var/img/favicon.png"],
+        "default_icon": "var/img/favicon.png"
     }
 }
