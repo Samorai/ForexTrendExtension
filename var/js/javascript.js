@@ -11,22 +11,22 @@ all_elements.each(function(){
             $(this).next().addClass('closed_by_extension');
             $(this).addClass('closed_by_extension');
         } else {
-            sum_was = parseFloat(tds[5].innerHTML);
-            if (sum_was != NaN) {
+            sum_now = parseFloat(tds[6].innerHTML);
+            if (!isNaN(sum_now)) {
                 var consult = tds[2].children[0].title.substr(13);
                 if (consult in by_consults){
 
                 } else {
                     by_consults[consult] = {sum_was:0,sum_now:0};
                 }
-
-                if (sum_was != NaN) {
+                sum_was = parseFloat(tds[5].innerHTML);
+                if (!isNaN(sum_was)) {
                     by_consults[consult].sum_was += parseFloat(tds[5].innerHTML);
                 } else {
                     by_consults[consult].sum_was += 0;
                 }
-                sum_now= parseFloat(tds[6].innerHTML);
-                if (sum_now != NaN) {
+
+                if (!isNaN(sum_now)) {
                     by_consults[consult].sum_now += parseFloat(tds[6].innerHTML);
                 } else {
                     by_consults[consult].sum_now += 0;
@@ -70,7 +70,7 @@ for (key in by_consults){
     );
 }
 
-$('#investors_block').append($("<button/>").click(
+$('#investors_block').prepend($("<button/>").click(
     function(){
         $(".closed_by_extension").each(function(){
             $(this).toggle();
