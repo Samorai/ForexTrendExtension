@@ -76,4 +76,4 @@ $('#investors_block').prepend($("<button/>").click(
             $(this).toggle();
         })
     }
-).html('Show/Hide Unactive Elements'));
+).html('Show/Hide Inactive Elements'));
