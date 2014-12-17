@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Forex Trend Helper",
-    "version": "1.5",
+    "version": "1.6",
     "permissions": [
          "https://fx-trend.com/*"
     ],

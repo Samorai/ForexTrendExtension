@@ -42,7 +42,7 @@ all_elements.each(function(){
                 }
 
                 if (!isNaN(sum_now)) {
-                    by_consults[consult].sum_now += parseFloat(tds[6].innerHTML);
+                    by_consults[consult].sum_now += parseFloat(sum_now);
                 } else {
                     by_consults[consult].sum_now += 0;
                 }
